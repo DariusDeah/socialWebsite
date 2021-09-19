@@ -8,6 +8,9 @@ export const PostSchema = new Schema({
   location: { type: String, required: true },
   price: { type: Number, min: 0 },
   tag: { type: String },
+  date: {
+    type:Date.now()
+  }
   creatorId: { type: Schema.Types.ObjectId, ref: 'Account', required: true }
 }, { timestamps: true, toJSON: { virtuals: true } })
 
